@@ -6,9 +6,7 @@
 git clone https://aniketambore/Python_Kivy_Firebase-Authentication-.git
 ```
 
-<br>
-<br>
-## Installing the Requirements
+<p><b> Installing the Requirements </b></p>
 - Install Python-Kivy Framework [Kivy](https://kivy.org/doc/stable/gettingstarted/installation.html).
 - Install a simple python wrapper for the firebase api [Pyrebase](https://awesomeopensource.com/project/thisbejim/Pyrebase?categoryPage=9).
 
@@ -19,4 +17,4 @@ Ex.
 <img src="Readme_Image/cod_1.jpg">
 
 ## Open the cloned source code
-*firebaseaut.py
+<i>firebaseaut.py</i>
