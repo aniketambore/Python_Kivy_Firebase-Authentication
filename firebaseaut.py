@@ -4,18 +4,13 @@ import json
 from kivy.app import App
 
 config = {
-    "apiKey": "AIzaSyDerqMdKQ_7k2s-m87QMwLdgqkwOPLVyww",
-    "authDomain": "kivy-auth-test.firebaseapp.com",
-    "databaseURL": "https://kivy-auth-test.firebaseio.com",
-    "projectId": "kivy-auth-test",
-    "storageBucket": "kivy-auth-test.appspot.com",
-    "messagingSenderId": "493226155473",
-    "appId": "1:493226155473:web:a3dc83f728c1801b5514f0",
-    "measurementId": "G-DTXZNBCL0X"
+    #Enter Your firebase configuration here
 }
 
 firebase_auth = pyrebase.initialize_app(config)
-firebase_data = firebase.FirebaseApplication("https://kivy-auth-test.firebaseio.com/" , None)
+
+#Enter Your firebase RealTime database url here
+firebase_data = firebase.FirebaseApplication("https://********.firebaseio.com/" , None)
 
 class MyFirebase() :
     def sign_up(self , fullname , email , password):
@@ -27,7 +22,7 @@ class MyFirebase() :
                 "Email": email,
                 "Password": password
             }
-            result = firebase_data.post("/kivy-auth-test/Student", data)
+            result = firebase_data.post("****", data) #Enter your database table name here
 
             # Creating User
             signup_auth = firebase_auth.auth()
@@ -65,6 +60,3 @@ class MyFirebase() :
             App.get_running_app().root.ids["forgot_password_screen"].ids["forgot_message"].text = "[b]Thanks! Please check your email .[/b]"
         except:
             App.get_running_app().root.ids["forgot_password_screen"].ids["forgot_message"].text = "[b][color=#FF0000]Please Enter Correct Email !.[/color][/b]"
-
-
-
