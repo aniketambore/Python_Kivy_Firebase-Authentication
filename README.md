@@ -38,7 +38,8 @@ firebaseaut.py
 <img src="Readme_Image/cod_6.jpg"> <br><br>
 
 ## Run the project from your favourite IDE as
-```python main.py
+```
+python main.py
 
 ```
 
