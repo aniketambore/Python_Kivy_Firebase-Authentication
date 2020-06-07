@@ -39,6 +39,7 @@ firebaseaut.py
 
 ## Run the project from your favourite IDE as
 ```python main.py
+
 ```
 
 # Output
