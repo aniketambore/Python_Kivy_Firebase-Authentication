@@ -1,0 +1,38 @@
+#: include kv/homescreen.kv
+#: include kv/settingsscreen.kv
+#: include kv/loginscreen.kv
+#: include kv/signupscreen.kv
+#: include kv/forgotpasswordscreen.kv
+
+GridLayout:
+    cols: 1
+    canvas:
+        Color:
+            rgb: utils.get_color_from_hex("#000000")
+        Rectangle:
+            size: self.size
+            pos: self.pos
+    FloatLayout:
+        Image:
+            source: "Images/github_logo.png"
+            pos_hint: {"top": 0.95 , "left": 1}
+            size_hint: 1,0.1
+        ScreenManager:
+            pos_hint: {"top": 0.85 , "left": 1}
+            size_hint: 1,0.9
+            id: screen_manager
+            LoginScreen:
+                id: login_screen
+                name: "login_screen"
+            SignUpScreen:
+                id: signup_screen
+                name: "signup_screen"
+            HomeScreen:
+                id: home_screen
+                name: "home_screen"
+            SettingsScreen:
+                id: settings_screen
+                name: "settings_screen"
+            ForgotPasswordScreen:
+                id: forgot_password_screen
+                name: "forgot_password_screen"

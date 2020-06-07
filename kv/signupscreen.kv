@@ -1,0 +1,65 @@
+#: import utils kivy.utils
+
+<SignUpScreen>:
+    canvas:
+        Color:
+            rgb: utils.get_color_from_hex("#000000")
+        Rectangle:
+            size: self.size
+            pos: self.pos
+    FloatLayout:
+        LabelButton:
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#b6d7ff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+            text: "Back"
+            color: (0,0,0,1)
+            size_hint: 0.3,0.1
+            pos_hint: {"top": 0.9 , "right": 0.4}
+            on_release:
+                app.change_screen("login_screen")
+
+        TextInput:
+            id: signup_fullname
+            hint_text: "Full Name"
+            size_hint: 0.8,0.1
+            pos_hint: {"top": 0.75 , "right": 0.9}
+            multiline: False
+
+        TextInput:
+            id: signup_email
+            hint_text: "Email Address"
+            size_hint: 0.8,0.1
+            pos_hint: {"top": 0.6 , "right": 0.9}
+            multiline: False
+
+        TextInput:
+            id: signup_password
+            hint_text: "Password"
+            size_hint: 0.8,0.1
+            pos_hint: {"top": 0.45 , "right": 0.9}
+            multiline: False
+            password: True
+
+        LabelButton:
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#b6d7ff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+            text: "Sign Up"
+            color: (0,0,0,1)
+            size_hint: 0.5,0.1
+            pos_hint: {"top": 0.3 , "right": 0.9}
+            on_release:
+                app.my_firebase.sign_up(signup_fullname.text , signup_email.text , signup_password.text)
+
+        Label:
+            size_hint: 0.8,0.1
+            pos_hint: {"top": 0.2 , "right": 0.9}
+            markup: True
+            id: signup_screen

@@ -1,0 +1,20 @@
+#: import utils kivy.utils
+
+<HomeScreen>:
+    canvas:
+        Color:
+            rgb: utils.get_color_from_hex("#000000")
+        Rectangle:
+            size: self.size
+            pos: self.pos
+    FloatLayout:
+        Label:
+            text: "[b]Hello[/b]"
+            size_hint: 0.8,0.1
+            pos_hint: {"top": 0.8 , "right":0.9}
+            markup: True
+        Label:
+            id: passing_email
+            size_hint: 0.8,0.1
+            pos_hint: {"top": 0.75 , "right":0.9}
+            markup: True

@@ -1,0 +1,77 @@
+#: import utils kivy.utils
+<LoginScreen>:
+    canvas:
+        Color:
+            rgb: utils.get_color_from_hex("#000000")
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+    FloatLayout:
+        Label:
+            id: login_message
+            size_hint: 0.8,0.1
+            pos_hint: {"top": 1 , "right": 0.9}
+            color: (1,0,0,1)
+            markup: True
+
+        TextInput:
+            id: login_email
+            hint_text: "email"
+            size_hint: 0.8,0.1
+            pos_hint: {"top": 0.90 , "right": 0.9}
+            multiline: False
+
+        TextInput:
+            id: login_password
+            hint_text: "password"
+            size_hint: 0.8,0.1
+            pos_hint: {"top": 0.75 , "right": 0.9}
+            multiline: False
+            password: True
+
+        LabelButton:
+            id: forgot_password
+            size_hint: 0.5,0.1
+            pos_hint: {"top": 0.65 , "right": 0.9}
+            color: utils.get_color_from_hex("#85a6de")
+            text: "[b]Forgot Password?[/b]"
+            markup: True
+            on_release:
+                app.change_screen("forgot_password_screen")
+
+        LabelButton:
+            canvas.before:
+                Color:
+                    rgb: utils.get_color_from_hex("#b6d7ff")
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+            text: "Log In"
+            color: (0,0,0,1)
+            size_hint: 0.8,0.1
+            pos_hint: {"top": 0.5 , "right": 0.9}
+            on_release:
+                app.my_firebase.sign_in(login_email.text , login_password.text)
+
+        Label:
+            text: "[b]Don't have an account?[/b]"
+            markup: True
+            size_hint: 0.8,0.1
+            pos_hint: {"top": 0.35 , "right": 0.9}
+
+        LabelButton:
+            text: "[b][u]Sign up[/u][/b]"
+            markup: True
+            size_hint: 0.8,0.1
+            pos_hint: {"top": 0.31 , "right": 0.9}
+            color: utils.get_color_from_hex("#85a6de")
+            on_release:
+                app.change_screen("signup_screen")
+
+
+
+
+
+
+
