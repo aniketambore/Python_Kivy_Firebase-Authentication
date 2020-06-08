@@ -47,15 +47,15 @@ python main.py
 <img src="Readme_Image/img_1.png" height="500"> <br><br>
 
 ## Sign UP
-<img src="Readme_Image/img_2.png" height="500"> <br><br>
+<img src="Readme_Image/img_2.png"> <br><br>
 
 ## If suppose you forgot your password
-<img src="Readme_Image/img_3.png" height="500"> <br><br>
+<img src="Readme_Image/img_3.png"> <br><br>
                                           
 <p>Click on Forgot Password and here you get the noreply email from firebase with a Reset Password link</p> <br>
-<img src="Readme_Image/img_4.png" height="500"> <br><br>
+<img src="Readme_Image/img_4.png"> <br><br>
 
 ## Successfull Login
-<img src="Readme_Image/img_5.png" height="500">
+<img src="Readme_Image/img_5.png">
 
 # Have Fun !!!
